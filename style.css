@@ -1,0 +1,130 @@
+body{
+    background: #11274f;
+ user-select: none;
+}
+
+#playContainer{
+    cursor: pointer;
+    height: 45px;
+    width: 40px;
+    position: absolute;
+    top: 20px;
+}
+
+#playShape{
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border: none;
+    clip-path: polygon(5px 5px, 15px 5px, 15px 45px, 25px 45px, 25px 5px, 35px 5px, 35px 45px, 5px 45px);
+}
+
+#invertContainer{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 23px;
+    left: 60px;
+    outline: 4px solid white;
+    transform: scale(0.75);
+}
+
+#invertShape{
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border: none;
+    clip-path: polygon(20px 10px, 20px 0px, 40px 0px, 40px 40px, 20px 40px, 20px 30px, 10px 20px, 20px 10px, 20px 30px, 30px 20px, 20px 10px);
+}
+
+#muteContainer{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 23px;
+    left: 110px;
+    background: white;
+    transform: scale(0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mute{
+    font-size: 12px;
+        font-family: 'Brush Script MT', cursive;
+    color: #11274f;
+}
+
+
+
+#main-container,
+#side-container {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    transform-origin: top left;
+    overflow: hidden;
+}
+
+#side-container video {
+    transform: translate(-50%, 0);
+}
+
+.resizer {
+    position: absolute;
+    opacity: 0;
+    z-index:99;
+}
+
+.resizer.main {
+    background-color: #2adecc;
+    width: 150px;
+    height: 150px;
+}
+
+.resizer.side {
+    background-color: #d9027c;
+    width: 86px;
+    height: 86px;
+}
+
+.resizer:hover{
+     opacity: 1;
+}
+
+.resizer.TR{
+    top: 0;
+    right: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+    cursor: ne-resize;
+}
+.resizer.TL{
+    top: 0;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    cursor: nw-resize;
+}
+.resizer.BR{
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    cursor: se-resize;
+}
+.resizer.BL{
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    cursor: sw-resize;
+}
+
+
+#main-container{
+    transform: scale(0.5);
+}
+
+#side-container{
+    transform: scale(0.15);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fufi.tv</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+    <div id="pholder"></div>
+
+    <div id="main-container" class="main">
+        <div id="resizer-main-TR" class="resizer main TR"></div>
+        <div id="resizer-main-TL" class="resizer main TL"></div>
+        <div id="resizer-main-BR" class="resizer main BR"></div>
+        <div id="resizer-main-BL" class="resizer main BL"></div>
+    </div>
+
+    <div id="side-container" class="side">
+        <div id="resizer-side-TR" class="resizer side TR"></div>
+        <div id="resizer-side-TL" class="resizer side TL"></div>
+        <div id="resizer-side-BR" class="resizer side BR"></div>
+        <div id="resizer-side-BL" class="resizer side BL"></div>
+        <video id="side-video" class="side video" width="3840" height="1080" autoplay></video>
+    </div>
+
+
+<!--	<button id="playButton" onclick="customPlayPause(this)">&#x23F8;</button>-->
+    <div id="playContainer" onclick="customPlayPause()" title="Play / Pause">
+	    <div id="playShape"></div>
+    </div>
+
+    <div id="invertContainer" onclick="changeLayers()" title="Invert Layers">
+	    <div id="invertShape"></div>
+    </div>
+
+    <div id="muteContainer" onclick="mute()" title="Mute">
+	    <div id="mute">MUTE</div>
+    </div>
+
+
+
+</body>
+    <script src="clappr.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</html>
